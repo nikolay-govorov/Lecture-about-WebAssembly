@@ -1,0 +1,11 @@
+{
+  "name": "lecture-about-wasm",
+	"author": "Nikolay Govorov",
+	"repository": "nikolay-govorov/Lecture-about-WebAssembly",
+	"scripts": {
+		"presentation": "shower serve"
+	},
+	"peerDependencies": {
+		"shower-cli": "^0.1.1"
+	}
+}
