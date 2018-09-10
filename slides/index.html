@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title data-template>{{meta.name}}</title>
+    <title>Применение WebAssembly</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,19 +12,38 @@
       .shower {
         --slide-ratio: calc(16 / 9);
       }
-    </style>
 
-    <script type="module" async src="scripts/main.js"></script>
+      .mute {
+        color: #999;
+      }
+
+      .small {
+        font-size: .75em;
+      }
+
+      li > p:last-child {
+        margin-bottom: 0;
+      }
+
+      li > pre {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+      }
+
+      ul ul > li::before {
+        content: '–' !important;
+      }
+    </style>
   </head>
   <body class="shower list">
     <header class="caption">
-      <h1 data-template>{{meta.name}}</h1>
+      <h1>Применение WebAssembly</h1>
 
-      <p data-template>{{meta.author.name}} из {{meta.author.company}}</p>
+      <p>Николай Говоров из ВКонтакте</p>
     </header>
 
     <section class="slide" id="cover">
-      <h2 data-template>{{meta.name}}</h2>
+      <h2>Применение WebAssembly</h2>
 
       <style>
         #cover h2 {
@@ -41,8 +60,157 @@
       </style>
     </section>
 
+    <section class="slide" id="love-frontend">
+      <h2>Я ❤️ frontend</h2>
+
+      <ul>
+        <li class="next">Огромная экосистема</li>
+        <li class="next">Лучший инструментарий</li>
+        <li class="next">Крупнейшая аудитория</li>
+        <li class="next">
+          Другие платформы копируют у нас
+
+          <p class="mute">(Electron, PhoneGap/Cordova)</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <img src="images/baby%20has%20grown.jpg" class="cover" alt="">
+    </section>
+
+    <section class="slide">
+      <img src="images/amel_true%20tweet.png" class="cover" alt="">
+    </section>
+
+    <section class="slide">
+      <img src="images/all%20normal.jpg" class="cover" alt="Web Applications">
+    </section>
+
+    <section class="slide" id="frontend-problems">
+      <img src="images/circuitries/frontend_problems.svg" alt="" class="cover">
+
+      <style>
+        #frontend-problems img {
+          width: 75%;
+        }
+      </style>
+    </section>
+
+    <section class="slide">
+      <img style="width: 100%" src="images/js-only.jpg" class="cover" />
+    </section>
+
+    <section class="slide" id="js-features">
+      <div class="lists columns two">
+        <ul>
+          <li class="next">Тяжёлый исходный код</li>
+
+          <li class="next">
+            Требователен к ресурсам
+
+            <ul>
+              <li>Дорогой парсинг</li>
+              <li>Cборщик мусора</li>
+            </ul>
+          </li>
+
+          <li class="next">
+            Ненадёжен
+
+            <ul>
+              <li>Спекулятивные опитимизации</li>
+              <li>Недетерминированность</li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul>
+          <li class="next">
+            Точные/сложные вычисления
+
+            <pre class="mute small">0.20 + 0.30 !== 0.40</pre>
+          </li>
+
+          <li class="next">
+            Жизнь вне фронтенда:
+
+            <ul>
+              <li>
+                Легаси
+
+                <p class="mute small">Проект на С++ на 100k строк <b>работающего</b> кода</p>
+              </li>
+
+              <li class="next">
+                Библиотеки
+
+                <p class="mute small">Миллионы <b>хорошо решённых</b> не на JS проблем</p>
+              </li>
+            </ul>
+          </li>
+
+          <li class="next">Обфускация, сокрытие исходников</li>
+        </ul>
+      </div>
+
+      <a class="next" href="https://www.youtube.com/watch?v=kS29TT4wk44">Сергей Рубанов "Real world WebAssembly"</a>
+
+      <style>
+        #js-features {
+          padding-top: 50px;
+          padding-left: 70px;
+          padding-right: 70px;
+        }
+
+        #js-features .lists {
+          grid-column-gap: 0;
+        }
+
+        #js-features ul ul {
+          margin-left: 30px;
+        }
+      </style>
+    </section>
+
+    <section class="slide">
+      <img class="cover" src="images/magic.jpg" alt="">
+    </section>
+
+    <section class="slide">
+      <a href="https://mrale.ph/blog/2018/02/03/maybe-you-dont-need-rust-to-speed-up-your-js.html">Maybe you dont need rust to speed up your js</a>
+    </section>
+
+    <section class="slide" id="what-next">
+      <h2>Что дальше?</h2>
+
+      <!-- todo: I must to add libraries -->
+    </section>
+
+    <section class="slide" id="contacts">
+      <h2>Николай Говоров из ВКонтакте</h2>
+
+      <ul>
+        <li>
+          <a href="https://govorov.online" target="_blank" rel="noopener noreferrer">govorov.online</a>
+        </li>
+
+        <li>
+          Twiter <a href="https://twitter.com/govorov_n" target="_blank" rel="noopener noreferrer">/govorov_n</a>
+        </li>
+
+        <li>
+          GitHub <a href="https://github.com/nikolay-govorov/" target="_blank" rel="noopener noreferrer">/nikolay-govorov</a>
+        </li>
+
+        <li>
+          ВКонтакте <a href="https://vk.com/nikolay_govorov" target="_blank" rel="noopener noreferrer">/nikolay_govorov</a>
+        </li>
+      </ul>
+    </section>
+
     <footer class="badge">
-      <a href="{{meta.repository}}" target="_blank" rel="noopener noreferrer" data-template>Fork me on GitHub</a>
+      <a href="https://github.com/nikolay-govorov/presentation__wasm" target="_blank" rel="noopener noreferrer">Fork me on GitHub</a>
     </footer>
 
     <div class="progress"></div>
