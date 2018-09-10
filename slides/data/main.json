@@ -1,0 +1,12 @@
+{
+  "meta": {
+    "name": "Применение WebAssembly",
+
+    "repository": "https://github.com/nikolay-govorov/presentation__wasm",
+
+    "author": {
+      "name": "Николай Говоров",
+      "company": "ВКонтакте"
+    }
+  }
+}
