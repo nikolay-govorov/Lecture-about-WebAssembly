@@ -97,7 +97,7 @@
 
     <section class="slide" id="what-we-doind">
       <div class="cover">
-        <p>– Мы делаем приложения в приложении для просмотра научных статей</p>
+        <p>– Мы делаем приложения в приложении для просмотра научных статей.</p>
         <p>– Что может пойти не так?</p>
       </div>
 
@@ -139,7 +139,7 @@
         <div>
           <h3 class="subheader">Концептуальные</h3>
 
-          <p class="small mute">Ограничения самой платформы.</p>
+          <p class="small mute">Ограничения самой платформы</p>
 
           <ul>
             <li class="next">Обсуфикация</li>
@@ -251,7 +251,7 @@
     </section> -->
 
     <section class="slide">
-      <h2>Вынесты логику на сервер</h2>
+      <h2>Перенести логику на сервер</h2>
 
       <ul>
         <li class="next">
@@ -270,7 +270,7 @@
         </li>
 
         <li class="next">
-          Может потребляет много трафика
+          Может потреблять много трафика
 
           <p class="small mute">Каждый чих потребует загрузить какие-то данные, возможно достаточно объёмные</p>
         </li>
@@ -434,8 +434,8 @@
 
       <p>
         <span class="next">WebAssembly – <b>цель компиляции</b>, формат байт-кода</span>
-        <span class="next">который хорошо ложится веб,</span>
-        <span class="next">виртуальная машина для которго реализована в браузере,</span>
+        <span class="next">который применим в вебе,</span>
+        <span class="next">виртуальная машина для которого реализована в браузере,</span>
         <span class="next">но <b>не только</b> в браузере.</span>
       </p>
     </section>
@@ -481,7 +481,37 @@
     <section class="slide" id="what-next">
       <h2>Что дальше?</h2>
 
-      <!-- todo: I must to add libraries -->
+      <ul>
+        <script>
+          const links = [
+            {
+              url: 'https://webassembly.org', label: 'webassembly.org'
+            },
+            {
+              url: 'https://hacks.mozilla.org/2017/02/what-makes-webassembly-fast/', label: 'What makes webassembly fast'
+            },
+            {
+              url: 'https://mrale.ph/blog/2018/02/03/maybe-you-dont-need-rust-to-speed-up-your-js.html',
+              label: 'Maybe you dont need rust to speed up your js'
+            },
+            {
+              url: 'https://www.youtube.com/watch?v=kS29TT4wk44',
+              label: 'Sergey Rubanov "Real world WebAssembly"'
+            }
+          ];
+
+          for (let { url, label, title } of links) {
+            label = label || url;
+            title = title || label;
+
+            document.write(`
+              <li>
+                <a href="${url}" title="${title}">${label}</a>
+              </li>
+            `);
+          }
+        </script>
+      </ul>
     </section>
 
     <section class="slide" id="contacts">
