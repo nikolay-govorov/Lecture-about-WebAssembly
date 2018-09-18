@@ -1,0 +1,32 @@
+.shower {
+  --slide-ratio: calc(16 / 9);
+}
+
+.mute {
+  color: #999;
+}
+
+.small {
+  font-size: .75em;
+}
+
+.visibility-hidden {
+  visibility: hidden;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+li > p:last-child {
+  margin-bottom: 0;
+}
+
+li > pre {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+ul ul > li::before {
+  content: '–' !important;
+}
