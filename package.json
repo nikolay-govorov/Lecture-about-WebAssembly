@@ -1,5 +1,8 @@
 {
   "name": "presentation__wasm",
   "author": "Nikolay Govorov @nikolay-govorov",
-  "repository": "github:nikolay-govorov/presentation__wasm"
+  "repository": "github:nikolay-govorov/presentation__wasm",
+  "scripts": {
+    "pr": "cd slides && npm run"
+  }
 }
