@@ -156,16 +156,6 @@
           margin-bottom: 0;
         }
       </style>
-
-      <!--
-      <img src="images/circuitries/frontend_problems.svg" alt="" class="cover">
-
-      <style>
-        #frontend-problems img {
-          width: 75%;
-        }
-      </style>
--->
     </section>
 
     <section class="slide">
@@ -245,10 +235,6 @@
         }
       </style>
     </section>
-
-    <!-- <section class="slide">
-      <img class="cover" src="images/magic.jpg" alt="">
-    </section> -->
 
     <section class="slide">
       <h2>Перенести логику на сервер</h2>
@@ -418,6 +404,17 @@
     </section>
 
     <section class="slide">
+      <h2>Например</h2>
+
+      <ul>
+        <li>Графика</li>
+        <li>Криптография</li>
+        <li>Легаси на С/C++</li>
+        <li>Алгоритмы эффективно работающие с памятью</li>
+      </ul>
+    </section>
+
+    <section class="slide">
       <h2>Чем WASM <u>не</u> является</h2>
 
       <ul>
@@ -438,6 +435,48 @@
         <span class="next">виртуальная машина для которого реализована в браузере,</span>
         <span class="next">но <b>не только</b> в браузере.</span>
       </p>
+    </section>
+
+    <section class="slide">
+      <img height="80%" class="cover" src="images/circuitries/plan.svg" alt="">
+    </section>
+
+    <section class="slide" id="wasm-formats">
+      <h2>Формат WASM файла</h2>
+
+      <p>Может быть записан в 2 эквивалентных форматах</p>
+
+      <div class="columns two">
+        <section>
+          <h3>Текстовый формат</h3>
+
+          <hr>
+
+          <ul>
+            <li>Читается человеком</li>
+            <li>Весит много</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Бинарный формат</h3>
+
+          <hr>
+
+          <ul>
+            <li>Читается машиной</li>
+            <li>Весит мало</li>
+          </ul>
+        </section>
+      </div>
+
+      <style>
+        #wasm-formats hr,
+        #wasm-formats h3 {
+          margin-top: 0;
+          margin-bottom: 0;
+        }
+      </style>
     </section>
 
     <section class="slide">
@@ -466,24 +505,85 @@
       </pre>
     </section>
 
-    <section class="slide" id="jit">
-      <h2>JIT</h2>
+    <section class="slide" id="v8">
+      <h2>V8</h2>
 
       <img src="images/circuitries/JIT.svg" alt="JIT">
 
       <style>
-        #jit img {
+        #v8 img {
           width: 100%;
         }
       </style>
     </section>
 
-    <section class="slide">
-      <img class="cover" width="70%" src="images/circuitries/arc.svg" alt="">
+    <section class="slide" id="this-is-not-js-killer">
+      <h2>Это не замена JavaScript</h2>
+
+      <img src="images/circuitries/arc.svg" alt="">
+
+      <style>
+        #this-is-not-js-killer h2 {
+          margin-top: -5%;
+        }
+
+        #this-is-not-js-killer img {
+          width: 70%;
+          position: absolute;
+          bottom: 10%;
+          left: 50%;
+          z-index: -1;
+          transform: translate(-50%, 0);
+          max-width: 100%;
+          max-height: 100%;
+        }
+      </style>
     </section>
 
     <section class="slide">
-      <h2 class="cover">Это не замена JavaScript</h2>
+      <img src="images/caniuse.png" alt="" class="cover">
+    </section>
+
+    <section class="slide">
+      <h2>Это уже в проде</h2>
+
+      <ul>
+        <li>Unity перешёл на WASM</li>
+        <li>https://github.com/rhysd/vim.wasm</li>
+        <li>https://blog.figma.com/webassembly-cut-figmas-load-time-by-3x-76f3f2395164</li>
+        <li>https://webassembly.org/demo/</li>
+        <li>https://s3.amazonaws.com/mozilla-games/ZenGarden/EpicZenGarden.html</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>main.c</h2>
+
+      <pre>
+        <code>#include &lt;stdio.h&gt;</code>        <code>int main(int argc, char ** argv) {</code>
+        <code>  printf("Hello, world!\n");</code>
+        <code>}</code>
+      </pre>
+
+      <pre>
+        <code>$ emcc main.c -s WASM=1 -o build/main.js</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <img height="100%" src="images/build.png" alt="" class="cover">
+    </section>
+
+    <section class="slide">
+      <h2><pre>index.html</pre></h2>
+
+      <pre>
+        <code>&lt;html&gt;</code>
+        <code> &lt;body&gt;</code>
+          <code>   &lt;script src="build/main.js"&gt;&lt;/script&gt;</code>
+        <code> &lt;/body&gt;</code>
+        <code>&lt;/html&gt;</code>
+      </pre>
     </section>
 
     <section class="slide" id="what-next">
