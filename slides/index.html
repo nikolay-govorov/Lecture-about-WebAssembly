@@ -326,8 +326,26 @@
       </style>
     </section>
 
-    <section class="slide">
-      <h2 class="cover">Это всё ещё JavaScript</h2>
+    <section class="slide" id="this-is-js">
+      <h2>Это всё ещё JavaScript</h2>
+
+      <style>
+        #this-is-js {
+          background-image: url("images/tumblr.jpg");
+          background-size: cover;
+        }
+
+        #this-is-js h2 {
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          text-align: center;
+          background-color: rgba(255, 255, 255, 0.7);
+          padding: 20px 0;
+        }
+      </style>
     </section>
 
     <section class="slide">
@@ -361,15 +379,91 @@
 
       <ul>
         <li class="next">WASM – цель компиляции</li>
+        <li class="next">Не имеет сборщика мусора</li>
         <li class="next">Компилируется из высокоуровневых языков</li>
         <li class="next">Выполняется в собственной виртуальной машине</li>
-        <li class="next mute">Не имеет сборщика мусора</li>
-        <li class="next mute">Не компилириуется JIT`ом</li>
       </ul>
     </section>
 
     <section class="slide">
       <h2>Чем он лучше</h2>
+
+      <ul>
+        <li>
+          Эффективный и быстрый
+        </li>
+
+        <li>
+          Безопасный
+        </li>
+
+        <li>
+          Полностью формализован и детерменирован
+
+          <p class="small mute">Верефицирован на <a href="https://isabelle.in.tum.de/">Isabelle</a></p>
+        </li>
+
+        <li>
+          Открытый и отлаживаемый
+
+          <p class="mute small">Предназначен для печати в текстовом формате</p>
+        </li>
+
+        <li>
+          Работает в вебе
+
+          <p class="mute small">Но не только в вебе</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Чем WASM <u>не</u> является</h2>
+
+      <ul>
+        <li>Расширением JS</li>
+        <li>Языком ассемблера</li>
+        <li>Языком программирования</li>
+        <li>Реализацией VM</li>
+        <li>Плагином вроде Flash / Silverlight</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>И снова</h2>
+
+      <p>
+        <span class="next">WebAssembly – <b>цель компиляции</b>, формат байт-кода</span>
+        <span class="next">который хорошо ложится веб,</span>
+        <span class="next">виртуальная машина для которго реализована в браузере,</span>
+        <span class="next">но <b>не только</b> в браузере.</span>
+      </p>
+    </section>
+
+    <section class="slide">
+      <h2>Текстовый формат</h2>
+
+      <pre>
+        <code>(module</code>
+        <code>  (func $avg (export "avg")</code>
+        <code>    (param $p0 i32) (param $p1 i32) (result i32)</code>
+        <code>    (i32.div_s</code>
+        <code>      (i32.add (get_local $p1)</code>
+        <code>               (get_local $p0))</code>
+        <code>      (i32.const 2))))</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Бинарный формат</h2>
+
+      <pre>
+        <code>00 61 73 6D 01 00 00 00 01 07 01 60 02 7F 7F 01</code>
+        <code>7F 03 02 01 00 07 07 01 03 61 76 67 00 00 0A 0C</code>
+        <code>01 0A 00 20 01 20 00 6A 41 02 6D 0B 00 1A 04 6E</code>
+        <code>61 6D 65 01 06 01 00 03 61 76 67 02 0B 01 00 02</code>
+        <code>00 02 70 30 01 02 70 31</code>
+      </pre>
     </section>
 
     <section class="slide" id="jit">
